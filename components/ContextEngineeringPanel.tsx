@@ -161,7 +161,7 @@ export default function ContextEngineeringPanel({
     summary.stage.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  const filteredEvalResults = evalResults.filter(eval => 
+  const filteredEvalResults = evalResults.filter(result => 
     eval.feedback.toLowerCase().includes(searchQuery.toLowerCase()) ||
     eval.stage.toLowerCase().includes(searchQuery.toLowerCase())
   );
@@ -297,16 +297,16 @@ export default function ContextEngineeringPanel({
                   ) : filteredEvalResults.length === 0 ? (
                     <div className="text-center py-8 text-gray-500">No evaluations yet</div>
                   ) : (
-                    filteredEvalResults.map((eval) => (
-                      <Card key={eval.id} className="p-4">
+                    filteredEvalResults.map((result) => (
+                      <Card key={result.id} className="p-4">
                         <div className="flex items-center justify-between mb-2">
-                          <Badge variant="secondary">{eval.stage}</Badge>
+                          <Badge variant="secondary">{result.stage}</Badge>
                           <div className="flex items-center gap-2">
                             <Activity className="h-4 w-4" />
-                            <span className="text-sm font-medium">Score: {eval.score}/10</span>
+                            <span className="text-sm font-medium">Score: {result.score}/10</span>
                           </div>
                         </div>
-                        <p className="text-sm text-gray-600 mb-2">{eval.feedback}</p>
+                        <p className="text-sm text-gray-600 mb-2">{result.feedback}</p>
                         <span className="text-xs text-gray-400">
                           {new Date(eval.timestamp).toLocaleString()}
                         </span>
