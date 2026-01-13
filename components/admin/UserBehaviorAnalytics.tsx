@@ -8,7 +8,7 @@ import {
   Activity, 
   Clock, 
   MapPin, 
-  Device, 
+  Monitor, 
   Globe, 
   BarChart3, 
   PieChart, 
