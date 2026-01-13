@@ -127,7 +127,7 @@ export default function ArtifactViewer({ artifactId, onEdit }: ArtifactViewerPro
     try {
       const response = await founderOSAPI.artifact.createVersion(artifact.id);
       if (response.success) {
-        router.push(`/founder-os/artifacts/${response.data.id}/edit`);
+        router.push(`/founder-os/artifacts/${response.data?.id || ""}/edit`);
       }
     } catch (err) {
       console.error('Create version error:', err);
