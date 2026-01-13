@@ -32,7 +32,7 @@ export default function RunPlaybookPage({ params }: Props) {
 
       {/* Playbook Runner */}
       <div className="max-w-5xl mx-auto px-4 py-8">
-        <PlaybookRunner playbookId={params.id} />
+        <PlaybookRunner playbookId={id} />
       </div>
     </div>
   );

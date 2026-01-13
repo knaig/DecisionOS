@@ -13,7 +13,8 @@ export const metadata: Metadata = {
   description: 'Track your metrics and progress',
 };
 
-export default function ScoreboardPage({ params }: Props) {
+export default async function ScoreboardPage({ params }: Props) { 
+  const { id } = await params;
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
@@ -32,7 +33,7 @@ export default function ScoreboardPage({ params }: Props) {
 
       {/* Scoreboard Dashboard */}
       <div className="max-w-7xl mx-auto px-4 py-8">
-        <ScoreboardDashboard scoreboardId={params.id} />
+        <ScoreboardDashboard scoreboardId={id} />
       </div>
     </div>
   );

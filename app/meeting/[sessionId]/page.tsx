@@ -10,15 +10,16 @@ interface PageProps {
 }
 
 export async function generateMetadata({ params }: PageProps) {
+  const { sessionId } = await params;
   return {
-    title: `Meeting Room - Session ${params.sessionId}`,
+    title: `Meeting Room - Session ${sessionId}`,
     description: 'BeBrahma Virtual Meeting Room with real-time AI agents',
     keywords: 'AI, meeting room, collaboration, real-time, agents'
   };
 }
 
 export default async function MeetingRoomPage({ params }: PageProps) {
-  const { sessionId } = params;
+  const { sessionId } = await params;
   
   // Validate sessionId format (basic validation)
   if (!sessionId || sessionId.length < 3) {
