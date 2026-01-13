@@ -162,8 +162,8 @@ export default function ContextEngineeringPanel({
   );
 
   const filteredEvalResults = evalResults.filter(result => 
-    eval.feedback.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    eval.stage.toLowerCase().includes(searchQuery.toLowerCase())
+    result.feedback.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    result.stage.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   const filteredToolTraces = toolTraces.filter(trace => 
