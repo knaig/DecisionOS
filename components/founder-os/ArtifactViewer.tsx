@@ -112,7 +112,7 @@ export default function ArtifactViewer({ artifactId, onEdit }: ArtifactViewerPro
     if (!artifact) return;
 
     try {
-      const response = await founderOSAPI.artifact.archive(artifact.id);
+      const response = await founderOSAPI.artifact.update(artifact.id, { status: 'ARCHIVED' } as any);
       if (response.success) {
         setArtifact({ ...artifact, status: 'ARCHIVED' });
       }
