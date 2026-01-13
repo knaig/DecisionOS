@@ -134,6 +134,7 @@ export const BillingDashboard: React.FC = () => {
               tasks: 12,
               storage: 256,
               apiCalls: 150,
+              users: 2,
               limits: {
                 projects: 3,
                 tasks: 50,
