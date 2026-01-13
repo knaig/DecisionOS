@@ -12,7 +12,7 @@ import {
   FileText, 
   Brain, 
   CheckCircle, 
-  Tool, 
+  Wrench, 
   Plus, 
   Search,
   Clock,
@@ -196,7 +196,7 @@ export default function ContextEngineeringPanel({
                 Evaluations
               </TabsTrigger>
               <TabsTrigger value="tools" className="flex items-center gap-2">
-                <Tool className="h-4 w-4" />
+                <Wrench className="h-4 w-4" />
                 Tools
               </TabsTrigger>
             </TabsList>
@@ -330,7 +330,7 @@ export default function ContextEngineeringPanel({
                       <Card key={trace.id} className="p-4">
                         <div className="flex items-center justify-between mb-3">
                           <div className="flex items-center gap-2">
-                            <Tool className="h-4 w-4" />
+                            <Wrench className="h-4 w-4" />
                             <span className="font-medium">{trace.tool_name}</span>
                           </div>
                           <Badge 
