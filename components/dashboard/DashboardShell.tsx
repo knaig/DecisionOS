@@ -30,7 +30,7 @@ export function DashboardShell({ children }: { children: React.ReactNode }) {
   const isAdmin = isAuthDisabled || 
                   user?.publicMetadata?.role === 'admin' || 
                   user?.publicMetadata?.role === 'super_admin' ||
-                  user?.emailAddresses?.some(email => 
+                  user?.emailAddresses?.some((email: any) => 
                     email.emailAddress === 'karthiknaig@gmail.com' || // Your email for testing
                     email.emailAddress?.endsWith('@bebrahma.com') // Company domain
                   );
