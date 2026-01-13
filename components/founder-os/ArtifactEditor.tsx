@@ -147,9 +147,9 @@ export default function ArtifactEditor({
 
       if (response.success) {
         if (onSave) {
-          onSave(response.data.id);
+          onSave(response.data?.id);
         } else {
-          router.push(`/founder-os/artifacts/${response.data.id}`);
+          router.push(`/founder-os/artifacts/${response.data?.id}`);
         }
       } else {
         setError(response.error || 'Failed to save artifact');
