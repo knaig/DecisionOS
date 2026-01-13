@@ -25,7 +25,7 @@ interface Template {
   createdAt: string;
   updatedAt: string;
   icon?: any;
-  metrics?: any;
+  metrics?: string[];
 }
 
 const TemplatesPage = () => {
