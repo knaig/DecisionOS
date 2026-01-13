@@ -17,7 +17,7 @@ import {
   MousePointer,
   Clock,
   MapPin,
-  Device,
+  Monitor,
   Globe,
   Filter,
   Search,
