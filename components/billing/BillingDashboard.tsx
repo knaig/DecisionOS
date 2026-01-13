@@ -407,7 +407,7 @@ export const BillingDashboard: React.FC = () => {
                           <div className="flex justify-between text-sm">
                             <span className="text-gray-600 capitalize">{key}</span>
                             <span className="font-medium">
-                              {value} / {limit || '∞'}
+                              {value as number} / {limit || '∞'}
                             </span>
                           </div>
                           <div className="w-full bg-gray-200 rounded-full h-2">
