@@ -303,7 +303,7 @@ export default function PlaybookRunner({ playbookId }: PlaybookRunnerProps) {
                     <Checkbox
                       id={gate.id}
                       checked={gateResults[gate.id] || false}
-                      onCheckedChange={(checked) => handleGateToggle(gate.id, checked as boolean)}
+                      onCheckedChange={(checked: any) => handleGateToggle(gate.id, checked as boolean)}
                       className="mt-1"
                     />
                     <div className="flex-1">
