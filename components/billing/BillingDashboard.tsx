@@ -71,7 +71,7 @@ interface BillingData {
   }>;
   paymentMethods: Array<{
     id: string;
-    type: string;
+    type: 'card' | 'bank_account';
     last4: string;
     brand: string;
     expMonth: number;
