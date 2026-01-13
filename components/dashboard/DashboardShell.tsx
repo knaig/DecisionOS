@@ -14,7 +14,7 @@ export function DashboardShell({ children }: { children: React.ReactNode }) {
   const isAuthDisabled = process.env.NEXT_PUBLIC_DISABLE_AUTH === 'true';
   
   // Conditionally use Clerk hooks only when auth is enabled
-  const clerkUser = isAuthDisabled ? null : useUser();
+  const clerkUser = (isAuthDisabled ? null : useUser()) as any;
   const { user, isLoaded } = isAuthDisabled ? { user: null, isLoaded: true } : clerkUser;
 
   // Role-based navigation - only show admin to users with admin role

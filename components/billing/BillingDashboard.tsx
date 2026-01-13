@@ -87,7 +87,7 @@ export const BillingDashboard: React.FC = () => {
   const isAuthDisabled = process.env.NEXT_PUBLIC_DISABLE_AUTH === 'true';
 
   // Conditionally use Clerk hook only when auth is enabled
-  const clerkUser = isAuthDisabled ? null : useUser();
+  const clerkUser = (isAuthDisabled ? null : useUser()) as any;
   const user = isAuthDisabled ? null : clerkUser?.user;
 
   const analytics = isAuthDisabled ? null : useAnalytics();
