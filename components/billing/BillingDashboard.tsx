@@ -40,7 +40,7 @@ interface SubscriptionPlan {
 // Billing data interface
 interface BillingData {
   subscription: {
-    id: string; planId: string; status: string;
+    id: string; planId: string; status: 'active' | 'canceled' | 'past_due' | 'unpaid';
     currentPeriodStart: string;
     currentPeriodEnd: string;
     cancelAtPeriodEnd: boolean;
