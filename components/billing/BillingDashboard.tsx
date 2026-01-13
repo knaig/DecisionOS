@@ -399,7 +399,7 @@ export const BillingDashboard: React.FC = () => {
                   <div className="space-y-4">
                     {Object.entries(usage).filter(([key]) => key !== 'limits').map(([key, value]) => {
                       const limit = usage.limits[key as keyof typeof usage.limits];
-                      const percentage = limit ? (value / limit) * 100 : 0;
+                      const percentage = limit ? ((value as number) / (limit as number)) * 100 : 0;
                       const isOverLimit = percentage > 100;
 
                       return (
