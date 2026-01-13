@@ -31,7 +31,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   const isAuthDisabled = process.env.NEXT_PUBLIC_DISABLE_AUTH === 'true';
   
   // Conditionally use Clerk hooks only when auth is enabled
-  const clerkUser = isAuthDisabled ? null : useUser();
+  const clerkUser = (isAuthDisabled ? null : useUser()) as any;
   const { user, isSignedIn, isLoaded } = isAuthDisabled ? { user: null, isSignedIn: false, isLoaded: true } : clerkUser;
   
   const [isReady, setIsReady] = useState(false);
