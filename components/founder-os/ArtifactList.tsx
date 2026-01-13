@@ -87,7 +87,7 @@ export default function ArtifactList({ workspaceSlug, limit }: ArtifactListProps
       const response = await founderOSAPI.artifact.list(filters);
 
       if (response.success) {
-        setArtifacts(response.data || []);
+        setArtifacts((response.data || []) as any);
       } else {
         setError(response.error || 'Failed to load artifacts');
       }
