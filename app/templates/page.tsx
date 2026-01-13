@@ -24,6 +24,7 @@ interface Template {
   usageCount: number;
   createdAt: string;
   updatedAt: string;
+  icon?: any;
 }
 
 const TemplatesPage = () => {
