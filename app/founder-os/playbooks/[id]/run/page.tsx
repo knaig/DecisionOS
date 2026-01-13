@@ -4,16 +4,15 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 
-type Props = {
-  params: { id: string };
-};
+type Props = any;
 
 export const metadata: Metadata = {
   title: 'Run Playbook - Founder OS',
   description: 'Execute your playbook step by step',
 };
 
-export default function RunPlaybookPage({ params }: Props) {
+export default async function RunPlaybookPage({ params }: Props) {
+  const { id } = await params;
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}

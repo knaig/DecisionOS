@@ -4,9 +4,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 
-type Props = {
-  params: { id: string };
-};
+type Props = any;
 
 export const metadata: Metadata = {
   title: 'Scoreboard - Founder OS',
