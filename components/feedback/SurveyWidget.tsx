@@ -292,7 +292,7 @@ export const SurveyWidget: React.FC<SurveyWidgetProps> = ({
               </label>
             ))}
             {error && (
-              <p className="text-red-500 text-sm">{error.message}</p>
+              <p className="text-red-500 text-sm">{(error.message as string)}</p>
             )}
           </div>
         );
@@ -320,7 +320,7 @@ export const SurveyWidget: React.FC<SurveyWidgetProps> = ({
               })}
             </div>
             {error && (
-              <p className="text-red-500 text-sm">{error.message}</p>
+              <p className="text-red-500 text-sm">{(error.message as string)}</p>
             )}
           </div>
         );
@@ -335,7 +335,7 @@ export const SurveyWidget: React.FC<SurveyWidgetProps> = ({
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             {error && (
-              <p className="text-red-500 text-sm">{error.message}</p>
+              <p className="text-red-500 text-sm">{(error.message as string)}</p>
             )}
           </div>
         );
@@ -364,7 +364,7 @@ export const SurveyWidget: React.FC<SurveyWidgetProps> = ({
               ))}
             </div>
             {error && (
-              <p className="text-red-500 text-sm">{error.message}</p>
+              <p className="text-red-500 text-sm">{(error.message as string)}</p>
             )}
           </div>
         );
@@ -393,7 +393,7 @@ export const SurveyWidget: React.FC<SurveyWidgetProps> = ({
               </label>
             </div>
             {error && (
-              <p className="text-red-500 text-sm">{error.message}</p>
+              <p className="text-red-500 text-sm">{(error.message as string)}</p>
             )}
           </div>
         );
