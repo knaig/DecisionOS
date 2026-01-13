@@ -64,7 +64,7 @@ export default function PlaybookList({ workspaceSlug }: PlaybookListProps) {
       const response = await founderOSAPI.playbook.list(params);
 
       if (response.success) {
-        setPlaybooks(response.data);
+        setPlaybooks((response.data || []) as any);
       } else {
         setError(response.error || 'Failed to load playbooks');
       }
