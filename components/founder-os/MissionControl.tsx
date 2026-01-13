@@ -376,7 +376,7 @@ function TaskCard({ task, variant }: { task: any; variant: 'urgent' | 'active' |
     P0: 'bg-red-100 text-red-800',
     P1: 'bg-orange-100 text-orange-800',
     P2: 'bg-yellow-100 text-yellow-800',
-  }[task.priority] || 'bg-gray-100 text-gray-800';
+  } as Record<string, string>)[task.priority] || 'bg-gray-100 text-gray-800';
 
   return (
     <div className="p-3 rounded-lg border bg-white hover:shadow-sm transition-shadow">
