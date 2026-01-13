@@ -140,9 +140,9 @@ export default function ArtifactEditor({
 
       let response;
       if (artifactId) {
-        response = await founderOSAPI.artifact.update(artifactId, payload);
+        response = await founderOSAPI.artifact.update(artifactId, payload as any);
       } else {
-        response = await founderOSAPI.artifact.create(payload);
+        response = await founderOSAPI.artifact.create(payload as any);
       }
 
       if (response.success) {
