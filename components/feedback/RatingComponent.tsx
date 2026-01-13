@@ -116,7 +116,7 @@ export const RatingComponent: React.FC<RatingComponentProps> = ({
     // Apply step
     const steppedRating = Math.round(clampedRating / step) * step;
     
-    onChange(steppedRating);
+    onChange?.(steppedRating);
   };
 
   // Handle hover
