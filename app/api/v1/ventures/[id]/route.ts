@@ -6,7 +6,7 @@ const prisma = new PrismaClient();
 // GET /api/v1/ventures/[id]
 export async function GET(
     request: NextRequest,
-    { params }: { params: { id: string } }
+    { params }: any
 ) {
     try {
         const venture = await prisma.venture.findUnique({
@@ -38,7 +38,7 @@ export async function GET(
 // PATCH /api/v1/ventures/[id]
 export async function PATCH(
     request: NextRequest,
-    { params }: { params: { id: string } }
+    { params }: any
 ) {
     try {
         const updates = await request.json();

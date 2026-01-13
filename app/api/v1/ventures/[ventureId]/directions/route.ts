@@ -4,7 +4,7 @@ import { prisma } from '@/lib/prisma';
 // GET /api/v1/ventures/[ventureId]/directions
 export async function GET(
     request: NextRequest,
-    { params }: { params: { ventureId: string } }
+    { params }: any
 ) {
     try {
         const directions = await prisma.direction.findMany({

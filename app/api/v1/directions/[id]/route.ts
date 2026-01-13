@@ -4,7 +4,7 @@ import { prisma } from '@/lib/prisma';
 // GET /api/v1/directions/[id]
 export async function GET(
     request: NextRequest,
-    { params }: { params: { id: string } }
+    { params }: any
 ) {
     try {
         const direction = await prisma.direction.findUnique({
@@ -35,7 +35,7 @@ export async function GET(
 // PATCH /api/v1/directions/[id]
 export async function PATCH(
     request: NextRequest,
-    { params }: { params: { id: string } }
+    { params }: any
 ) {
     try {
         const updates = await request.json();
