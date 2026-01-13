@@ -1,17 +1,14 @@
 import { Metadata } from 'next';
 import ArtifactEditor from '@/components/founder-os/ArtifactEditor';
 
-type Props = {
-  searchParams: { workspace?: string };
-};
-
 export const metadata: Metadata = {
   title: 'Create Artifact - Founder OS',
   description: 'Create a new artifact',
 };
 
-export default function NewArtifactPage({ searchParams }: Props) {
-  const workspaceSlug = searchParams.workspace || 'default';
+export default async function NewArtifactPage({ searchParams }: any) {
+  const { workspace } = await searchParams;
+  const workspaceSlug = workspace || 'default';
 
   return (
     <div className="min-h-screen bg-gray-50">
