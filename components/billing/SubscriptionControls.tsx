@@ -200,7 +200,7 @@ export const SubscriptionControls: React.FC<SubscriptionControlsProps> = ({
       trackFeatureUsage('subscription', 'upgrade_failed', { 
         fromPlan: currentPlan.id, 
         toPlan: plan.id, 
-        error: error.message 
+        error: (error as Error).message 
       });
     } finally {
       setLoading(false);
@@ -225,7 +225,7 @@ export const SubscriptionControls: React.FC<SubscriptionControlsProps> = ({
       console.error('Error canceling subscription:', error);
       trackFeatureUsage('subscription', 'cancel_failed', { 
         planId: currentPlan.id, 
-        error: error.message 
+        error: (error as Error).message 
       });
     } finally {
       setLoading(false);
@@ -245,7 +245,7 @@ export const SubscriptionControls: React.FC<SubscriptionControlsProps> = ({
       console.error('Error updating payment method:', error);
       trackFeatureUsage('payment_method', 'update_failed', { 
         methodId, 
-        error: error.message 
+        error: (error as Error).message 
       });
     }
   };
