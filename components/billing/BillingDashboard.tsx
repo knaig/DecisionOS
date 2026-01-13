@@ -77,6 +77,7 @@ interface BillingData {
     expMonth: number;
     expYear: number;
     isDefault: boolean;
+    isExpired: boolean;
   }>;
 }
 
