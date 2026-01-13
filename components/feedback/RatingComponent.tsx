@@ -9,7 +9,7 @@ export type RatingType = 'star' | 'emoji' | 'numeric' | 'thumbs' | 'heart' | 'cu
 // Rating component props
 export interface RatingComponentProps {
   value: number;
-  onChange: (rating: number) => void;
+  onChange?: (rating: number) => void;
   type?: RatingType;
   max?: number;
   min?: number;
