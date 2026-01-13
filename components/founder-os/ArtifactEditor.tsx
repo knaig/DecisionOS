@@ -265,7 +265,7 @@ export default function ArtifactEditor({
                   <Label htmlFor="type">Type *</Label>
                   <Select
                     value={formData.type}
-                    onValueChange={(value) => setFormData({ ...formData, type: value })}
+                    onValueChange={(value: string) => setFormData({ ...formData, type: value })}
                   >
                     <SelectTrigger id="type">
                       <SelectValue />
@@ -284,7 +284,7 @@ export default function ArtifactEditor({
                   <Label htmlFor="status">Status *</Label>
                   <Select
                     value={formData.status}
-                    onValueChange={(value) => setFormData({ ...formData, status: value })}
+                    onValueChange={(value: string) => setFormData({ ...formData, status: value })}
                   >
                     <SelectTrigger id="status">
                       <SelectValue />
