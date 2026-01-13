@@ -95,7 +95,7 @@ export default function SessionSummary({ sessionStart, trigger }: SessionSummary
       const response = await founderOSAPI.dashboard.getSessionSummary(since);
 
       if (response.success) {
-        setData(response.data);
+        setData((response.data || null) as any);
       } else {
         setError(response.error || 'Failed to load session summary');
       }
