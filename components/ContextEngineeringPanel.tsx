@@ -308,7 +308,7 @@ export default function ContextEngineeringPanel({
                         </div>
                         <p className="text-sm text-gray-600 mb-2">{result.feedback}</p>
                         <span className="text-xs text-gray-400">
-                          {new Date(eval.timestamp).toLocaleString()}
+                          {new Date(result.timestamp).toLocaleString()}
                         </span>
                       </Card>
                     ))
