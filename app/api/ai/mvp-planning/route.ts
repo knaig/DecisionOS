@@ -1,14 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-export async function POST(
-  request: NextRequest,
-  { params }: { params: {} }
-) {
+export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
 
-    // Forward the request to the backend API
     const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL;
+    if (!API_BASE_URL) {
+        return NextResponse.json({ error: "Backend URL not configured" }, { status: 500 });
+    }
+
     const response = await fetch(`${API_BASE_URL}/api/ai/mvp-planning`, {
       method: 'POST',
       headers: {
