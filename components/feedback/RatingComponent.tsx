@@ -4,7 +4,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Star, ThumbsUp, Heart, Smile, Zap } from 'lucide-react';
 
 // Rating types
-export type RatingType = 'star' | 'emoji' | 'numeric' | 'thumbs' | 'heart' | 'custom';
+export type RatingType = 'star' | 'emoji' | 'numeric' | 'thumbs' | 'heart' | 'custom' | 'zap';
 
 // Rating component props
 export interface RatingComponentProps {
