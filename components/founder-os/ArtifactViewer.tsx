@@ -96,7 +96,7 @@ export default function ArtifactViewer({ artifactId, onEdit }: ArtifactViewerPro
       const response = await founderOSAPI.artifact.get(artifactId);
 
       if (response.success) {
-        setArtifact(response.data);
+        setArtifact((response.data || null) as any);
       } else {
         setError(response.error || 'Failed to load artifact');
       }
