@@ -40,7 +40,7 @@ interface SubscriptionPlan {
 // Billing data interface
 interface BillingData {
   subscription: {
-    status: string;
+    id: string; planId: string; status: string;
     currentPeriodStart: string;
     currentPeriodEnd: string;
     cancelAtPeriodEnd: boolean;
@@ -62,7 +62,7 @@ interface BillingData {
     id: string;
     amount: number;
     currency: string;
-    status: string;
+    id: string; planId: string; status: string;
     date: string;
     pdfUrl?: string;
   }>;
@@ -105,7 +105,7 @@ export const BillingDashboard: React.FC = () => {
           // Mock billing data for development
           const mockData: BillingData = {
             subscription: {
-              status: 'active',
+              id: 'sub_mock', planId: 'plan_free', status: 'active',
               currentPeriodStart: new Date().toISOString(),
               currentPeriodEnd: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString(),
               cancelAtPeriodEnd: false,
