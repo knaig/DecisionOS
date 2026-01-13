@@ -372,7 +372,7 @@ export default function MissionControl({ workspaceSlug }: MissionControlProps) {
 
 // Task Card Component
 function TaskCard({ task, variant }: { task: any; variant: 'urgent' | 'active' | 'next' | 'blocked' }) {
-  const priorityColor = {
+  const priorityColor = ({
     P0: 'bg-red-100 text-red-800',
     P1: 'bg-orange-100 text-orange-800',
     P2: 'bg-yellow-100 text-yellow-800',
