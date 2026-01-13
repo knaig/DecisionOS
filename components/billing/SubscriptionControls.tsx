@@ -572,7 +572,7 @@ export const SubscriptionControls: React.FC<SubscriptionControlsProps> = ({
                         {Object.entries(comparison).map(([key, change]) => (
                           <div key={key} className="flex items-center justify-between text-sm">
                             <span className="text-gray-600 capitalize">{key}</span>
-                            {getComparisonIcon(change)}
+                            {getComparisonIcon(change as any)}
                           </div>
                         ))}
                       </div>
