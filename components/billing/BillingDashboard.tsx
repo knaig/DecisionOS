@@ -33,6 +33,7 @@ interface SubscriptionPlan {
     tasks: number;
     storage: number;
     apiCalls: number;
+    users: number;
   };
   current: boolean;
 }
@@ -51,11 +52,13 @@ interface BillingData {
     tasks: number;
     storage: number;
     apiCalls: number;
+    users: number;
     limits: {
       projects: number;
       tasks: number;
       storage: number;
       apiCalls: number;
+    users: number;
     };
   };
   invoices: Array<{
@@ -121,6 +124,7 @@ export const BillingDashboard: React.FC = () => {
                   tasks: 50,
                   storage: 1024,
                   apiCalls: 1000,
+                  users: 5,
                 },
                 current: true,
               },
@@ -135,6 +139,7 @@ export const BillingDashboard: React.FC = () => {
                 tasks: 50,
                 storage: 1024,
                 apiCalls: 1000,
+                  users: 5,
               },
             },
             invoices: [],
