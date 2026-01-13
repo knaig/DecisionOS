@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowLeft, Workspace, User, Bell, Database } from 'lucide-react';
+import { ArrowLeft, Briefcase, User, Bell, Database } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Settings - Founder OS',
@@ -33,12 +33,12 @@ export default function SettingsPage() {
       {/* Settings Content */}
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="space-y-6">
-          {/* Workspace Settings */}
+          {/* Briefcase Settings */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Workspace className="h-5 w-5" />
-                Workspace Settings
+                <Briefcase className="h-5 w-5" />
+                Briefcase Settings
               </CardTitle>
               <CardDescription>Manage your workspace configuration and objectives</CardDescription>
             </CardHeader>
@@ -46,19 +46,19 @@ export default function SettingsPage() {
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="font-medium">Current Workspace</p>
+                    <p className="font-medium">Current Briefcase</p>
                     <p className="text-sm text-gray-600">View and edit workspace details</p>
                   </div>
-                  <Button variant="outline">Edit Workspace</Button>
+                  <Button variant="outline">Edit Briefcase</Button>
                 </div>
                 <hr />
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="font-medium">Create New Workspace</p>
+                    <p className="font-medium">Create New Briefcase</p>
                     <p className="text-sm text-gray-600">Start a new workspace for a different project</p>
                   </div>
                   <Link href="/founder-os/onboarding">
-                    <Button variant="outline">New Workspace</Button>
+                    <Button variant="outline">New Briefcase</Button>
                   </Link>
                 </div>
               </div>
@@ -130,7 +130,7 @@ export default function SettingsPage() {
                 <hr />
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="font-medium">Delete Workspace</p>
+                    <p className="font-medium">Delete Briefcase</p>
                     <p className="text-sm text-gray-600 text-red-600">Permanently delete this workspace</p>
                   </div>
                   <Button variant="destructive">Delete</Button>

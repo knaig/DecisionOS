@@ -1,7 +1,7 @@
 import React from 'react';
 import ContextEngineeringPanel from '@/components/ContextEngineeringPanel';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Brain, FileText, CheckCircle, Tool, Activity } from 'lucide-react';
+import { Brain, FileText, CheckCircle, Wrench, Activity } from 'lucide-react';
 
 export default function ContextPage() {
   return (
@@ -57,8 +57,8 @@ export default function ContextPage() {
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Tool Executions</CardTitle>
-            <Tool className="h-4 w-4 text-muted-foreground" />
+            <CardTitle className="text-sm font-medium">Wrench Executions</CardTitle>
+            <Wrench className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">156</div>
@@ -116,8 +116,8 @@ export default function ContextPage() {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <Tool className="h-5 w-5" />
-              Tool Registry
+              <Wrench className="h-5 w-5" />
+              Wrench Registry
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -126,7 +126,7 @@ export default function ContextPage() {
             </p>
             <div className="space-y-2">
               <div className="flex items-center justify-between text-sm">
-                <span>Registered Tools</span>
+                <span>Registered Wrenchs</span>
                 <span className="font-medium">8</span>
               </div>
               <div className="flex items-center justify-between text-sm">
