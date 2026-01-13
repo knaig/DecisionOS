@@ -105,19 +105,19 @@ const DependencyGraph: React.FC<DependencyGraphProps> = ({
             const fontSize = 12 / globalScale;
             ctx.font = `${fontSize}px Sans-Serif`;
             const textWidth = ctx.measureText(label).width;
-            const bckgDimensions = [textWidth, fontSize].map(n => n + fontSize * 0.2);
+            conbckgDimensions[0], bckgDimensions[1] = [textWidth, fontSize].map(n => n + fontSize * 0.2);
 
             ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
             ctx.fillRect(
-              node.x - bckgDimensions[0] / 2,
-              node.y + bckgDimensions[1] / 2,
-              ...bckgDimensions
+              node.xbckgDimensions[0], bckgDimensions[1][0] / 2,
+              node.ybckgDimensions[0], bckgDimensions[1][1] / 2,
+              bckgDimensions[0], bckgDimensions[1]
             );
 
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
             ctx.fillStyle = '#374151';
-            ctx.fillText(label, node.x, node.y + bckgDimensions[1] / 2 + fontSize * 0.1);
+            ctx.fillText(label, node.x, node.ybckgDimensions[0], bckgDimensions[1][1] / 2 + fontSize * 0.1);
           }}
         />
       </div>
