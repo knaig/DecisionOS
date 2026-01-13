@@ -91,7 +91,7 @@ export default function ArtifactEditor({
       const response = await founderOSAPI.artifact.get(artifactId);
 
       if (response.success) {
-        const artifact = response.data;
+        const artifact = response.data as any;
         setFormData({
           title: artifact.title,
           type: artifact.type,
