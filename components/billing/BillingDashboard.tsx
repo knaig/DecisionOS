@@ -62,7 +62,7 @@ interface BillingData {
     id: string;
     amount: number;
     currency: string;
-    id: string; planId: string; status: string;
+    status: string;
     date: string;
     pdfUrl?: string;
   }>;
